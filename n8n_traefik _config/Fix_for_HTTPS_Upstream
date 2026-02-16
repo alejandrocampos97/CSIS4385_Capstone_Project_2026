@@ -1,0 +1,26 @@
+2) Create the dynamic config file
+
+On your host, create:
+
+./traefik/dynamic/wazuh-transport.yml
+
+If you want the fastest “just make it work”:
+
+http:
+  serversTransports:
+    wazuh-insecure:
+      insecureSkipVerify: true
+
+3) Add this label to your Wazuh Dashboard service
+- "traefik.http.services.wazuh.loadbalancer.serversTransport=wazuh-insecure@file"
+
+And keep:
+
+- "traefik.http.services.wazuh.loadbalancer.server.scheme=https"
+- "traefik.http.services.wazuh.loadbalancer.server.port=5601"
+
+4) Restart
+docker compose up -d --force-recreate traefik
+docker restart wazuh.dashboard
+
+✅ This resolves the “SSL alert bad certificate” caused by Traefik rejecting your internal CA cert.
