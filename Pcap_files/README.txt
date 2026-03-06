@@ -1,0 +1,1 @@
+All pcap files fot alert testing wil be donwloaded here from: https://www.malware-traffic-analysis.net/index.html
