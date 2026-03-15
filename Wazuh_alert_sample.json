@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-03-15T17:34:25.131+0000",
+  "rule": {
+    "level": 15,
+    "description": "Suricata: Alert - ET MALWARE LokiBot Request for C2 Commands Detected M1",
+    "id": "86681",
+    "firedtimes": 10,
+    "mail": true,
+    "groups": [
+      "ids",
+      "suricata"
+    ]
+  },
+  "agent": {
+    "id": "004",
+    "name": "suricata",
+    "ip": "172.17.1.5"
+  },
+  "manager": {
+    "name": "wazuh.manager"
+  },
+  "id": "1773596065.48874",
+  "full_log": "{\"timestamp\":\"2026-03-15T17:34:24.995757+0000\",\"flow_id\":239183257522996,\"in_iface\":\"ens33\",\"event_type\":\"alert\",\"src_ip\":\"10.0.0.168\",\"src_port\":49745,\"dest_ip\":\"136.243.159.53\",\"dest_port\":80,\"proto\":\"TCP\",\"ip_v\":4,\"pkt_src\":\"wire/pcap\",\"metadata\":{\"flowbits\":[\"http.dottedquadhost\",\"ET.LokiBot\"],\"flowints\":{\"http.anomaly.count\":1}},\"community_id\":\"1:ooae6dsYQ+2env7Bhj7dRnQ52Ws=\",\"tx_id\":0,\"alert\":{\"action\":\"allowed\",\"gid\":1,\"signature_id\":2024313,\"rev\":6,\"signature\":\"ET MALWARE LokiBot Request for C2 Commands Detected M1\",\"category\":\"Malware Command and Control Activity Detected\",\"severity\":1,\"metadata\":{\"affected_product\":[\"Windows_XP_Vista_7_8_10_Server_32_64_Bit\"],\"attack_target\":[\"Client_Endpoint\"],\"confidence\":[\"High\"],\"created_at\":[\"2017_05_17\"],\"deployment\":[\"Perimeter\"],\"malware_family\":[\"lokibot\"],\"signature_severity\":[\"Critical\"],\"updated_at\":[\"2024_11_20\"]}},\"ts_progress\":\"request_complete\",\"tc_progress\":\"response_body\",\"http\":{\"hostname\":\"136.243.159.53\",\"url\":\"/~element/page.php?id=484\",\"http_user_agent\":\"Mozilla/4.08 (Charon; Inferno)\",\"http_content_type\":\"text/html\",\"http_method\":\"POST\",\"protocol\":\"HTTP/1.0\",\"status\":404,\"length\":324},\"files\":[{\"filename\":\"/~element/page.php\",\"gaps\":false,\"state\":\"CLOSED\",\"stored\":false,\"size\":153,\"tx_id\":0}],\"app_proto\":\"http\",\"direction\":\"to_server\",\"flow\":{\"pkts_toserver\":5,\"pkts_toclient\":4,\"bytes_toserver\":698,\"bytes_toclient\":702,\"start\":\"2026-03-15T17:34:24.645513+0000\",\"src_ip\":\"10.0.0.168\",\"dest_ip\":\"136.243.159.53\",\"src_port\":49745,\"dest_port\":80}}",
+  "decoder": {
+    "name": "json"
+  },
+  "data": {
+    "timestamp": "2026-03-15T17:34:24.995757+0000",
+    "flow_id": "239183257522996.000000",
+    "in_iface": "ens33",
+    "event_type": "alert",
+    "src_ip": "10.0.0.168",
+    "src_port": "49745",
+    "dest_ip": "136.243.159.53",
+    "dest_port": "80",
+    "proto": "TCP",
+    "ip_v": "4",
+    "pkt_src": "wire/pcap",
+    "metadata": {
+      "flowbits": [
+        "http.dottedquadhost",
+        "ET.LokiBot"
+      ],
+      "flowints": {
+        "http": {
+          "anomaly": {
+            "count": "1"
+          }
+        }
+      }
+    },
+    "community_id": "1:ooae6dsYQ+2env7Bhj7dRnQ52Ws=",
+    "tx_id": "0",
+    "alert": {
+      "action": "allowed",
+      "gid": "1",
+      "signature_id": "2024313",
+      "rev": "6",
+      "signature": "ET MALWARE LokiBot Request for C2 Commands Detected M1",
+      "category": "Malware Command and Control Activity Detected",
+      "severity": "1",
+      "metadata": {
+        "affected_product": [
+          "Windows_XP_Vista_7_8_10_Server_32_64_Bit"
+        ],
+        "attack_target": [
+          "Client_Endpoint"
+        ],
+        "confidence": [
+          "High"
+        ],
+        "created_at": [
+          "2017_05_17"
+        ],
+        "deployment": [
+          "Perimeter"
+        ],
+        "malware_family": [
+          "lokibot"
+        ],
+        "signature_severity": [
+          "Critical"
+        ],
+        "updated_at": [
+          "2024_11_20"
+        ]
+      }
+    },
+    "ts_progress": "request_complete",
+    "tc_progress": "response_body",
+    "http": {
+      "hostname": "136.243.159.53",
+      "url": "/~element/page.php?id=484",
+      "http_user_agent": "Mozilla/4.08 (Charon; Inferno)",
+      "http_content_type": "text/html",
+      "http_method": "POST",
+      "protocol": "HTTP/1.0",
+      "status": "404",
+      "length": "324"
+    },
+    "files": [
+      {
+        "filename": "/~element/page.php",
+        "gaps": false,
+        "state": "CLOSED",
+        "stored": false,
+        "size": 153,
+        "tx_id": 0
+      }
+    ],
+    "app_proto": "http",
+    "direction": "to_server",
+    "flow": {
+      "pkts_toserver": "5",
+      "pkts_toclient": "4",
+      "bytes_toserver": "698",
+      "bytes_toclient": "702",
+      "start": "2026-03-15T17:34:24.645513+0000",
+      "src_ip": "10.0.0.168",
+      "dest_ip": "136.243.159.53",
+      "src_port": "49745",
+      "dest_port": "80"
+    }
+  },
+  "location": "/var/log/suricata/eve.json"
+}

@@ -34,3 +34,5 @@
     <description>Suricata: Alert - $(alert.signature)</description>
   </rule>
 </group>
+
+# from https://github.com/wazuh/wazuh/issues/28520#issue-2904380378
